@@ -1,0 +1,77 @@
+Forex Classifier Feature Descriptions
+
+DATASET MKI ("gj_cleandraft.csv")
+
+Header - Description
+
+date - date and start time of trading period
+open - opening value 
+high - high value
+low - low value
+close - closing value
+vwma - volume weighted moving average 
+sr_low - lower support resistance level taken from Trading View
+sr_high - higher support resistance level taken from Trading View
+volume - volume traded during the period
+sent_30 - thirty minute sentiment taken from Trading View
+RSI - relative strength index at close of previous period
+direction - the direction, long or short, that the period closes in
+body_size - the size of the period candle body measured in pips
+top_wick - the size, in pips, of the top wick from body high to wick high
+bottom_wick - the size, in pips, of the bottom wick from body low to wick low
+trade_class - whether the trade was a win (7pip gain) or a loss (any other outcome)
+trade_class_two - whether the trade was a win (over 7 pip gain), loss (retrace to stop loss) or no_score (any other outcome)
+day_of_week - the day of the week
+day - the day of the week as an integer value of the date (1st day of month == 1 etc)  year - the year
+time - the time of day in 24hr format
+session - the trading session split into four periods morning, afternoon, evening, night
+vfive - the average volume of the last five trading periods
+rel_vol - the relative volume of the signal candle in comparison to vfive
+out_mag - win and loss sizes measured in pips (magnitude)
+signal - A simple trade / no trade feature based on the initial hypothesis
+break_level - states at what level our signal candle closes in relation to previous candle
+sent_4h - the four hourly sentiment based on import from Trading View
+x_vwma - states whether the signal candle cross through the vwma
+pos_can - distance to vwma if value moving toward the vwma
+neg_can - distance to vwma if value moving away from vwma
+prof_loss - the profit and loss potential of each trade signal
+det_trade - categorical feature to state whether the trade would result in strong win, strong loss, win, loss (no trades == 0)
+short_rsi - binary feature, given a short trade signal is the RSI in overbought territory, 1 for yes 0 for no
+long_rsi - binary feature, given a long trade signal is the RSI in oversold territory, 1 for yes 0 for no
+sr_dist - distance to our support and resistance levels (sr_low and sr_high)
+
+
+
+DATASET MKII ("...... ")
+
+Header - Description
+
+time - date and time at opening of period
+open - opening value
+high - high value
+low - low value
+close - closing value
+fast_stoch - short term stochastic tool imported from Trading View
+slow_stoch - longer term stochastic tool imported from Trading View
+rsi - relative strength index
+30_sent - thirty minute sentiment imported from Trading View
+thirty_trend - the thirty minute trend
+4h_sent - four hour sentiment imported from Trading View
+four_trend - the four hour trend
+candle_dir - direction the candle closes in
+dt_signal - signal direction based on double tap hypothesis (ie change of direction) 
+sent_signal - based on our new trend hypothesis, feature states what valid signal we have
+simple_result - trade outcome based on the next candle only
+running_result - trade outcome based on the following four candles
+profit - profit and loss with restricted win margin
+ext_profit - profit and loss with no restricted win margins
+no_sig_stop - trade outcome based on next candle if we ignore signal reversals
+running_nosig - trade outcome based on following four candles if we ignore signal reversals
+tuned_profit - profit and loss when ignoring signal reversals
+
+
+
+
+
+
+
