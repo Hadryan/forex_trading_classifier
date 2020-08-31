@@ -9,25 +9,25 @@ Contents
 
 
 
-1. BUSINESS PROBLEM
+Section 1 - Business Problem and Hypotheses
 
 
 
-2. File Structure
-
-
-
-
-3. Results
+Section 2 - File Structure
 
 
 
 
-
-4. Evaluation
+Section 3 - Results
 
 
 
 
 
-5. Conclusions and Next Steps
+Section 4 -  Evaluation
+
+
+
+
+
+Section 5 - Conclusions and Next Steps
